@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let products = []; // Almacena los productos
+    let products = []; 
 
     document.getElementById('productForm').addEventListener('submit', function(e) {
-        e.preventDefault(); // Previene la recarga de la página
+        e.preventDefault(); 
 
         const nombre = document.getElementById('nombreProducto').value;
         const descripcion = document.getElementById('descripcionProducto').value;
         const precio = document.getElementById('precioProducto').value;
 
         products.push({ nombre, descripcion, precio });
-        displayProductsOnPage(products); // Actualiza la lista de productos en la página
+        displayProductsOnPage(products); 
 
         document.getElementById('nombreProducto').value = '';
         document.getElementById('descripcionProducto').value = '';
@@ -36,12 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         searchWindow.document.write('</body></html>');
-        searchWindow.document.close(); // Asegura que el documento en la nueva ventana se maneje correctamente
+        searchWindow.document.close(); 
     });
 
     function displayProductsOnPage(products) {
         const productsList = document.getElementById('productsList');
-        productsList.innerHTML = ''; // Limpia el contenedor de productos
+        productsList.innerHTML = ''; 
 
         products.forEach(product => {
             const productEl = document.createElement('div');
