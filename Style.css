@@ -44,4 +44,7 @@ button:hover {
     max-width: 200px;
     margin: 300;
     margin-top: -70px;
+    margin-bottom: 40px;
+    border: 40px;
+    margin-left: 150px;
 }
