@@ -41,5 +41,7 @@ button:hover {
 }
 
 #productsList img {
-    max-width: 100px;
+    max-width: 200px;
+    margin: 300;
+    margin-top: -70px;
 }
