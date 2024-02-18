@@ -40,9 +40,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 <strong>Descripción:</strong> ${product.descripcion}<br>
                 <strong>Precio:</strong> $${product.precio}<br>
                 <strong>Categoría:</strong> ${product.categoria}<br>
-                <img src="${product.imagen}" alt="Imagen del producto" style="max-width: 100px;"><br>
+                <img src="${product.imagen}" alt="Imagen del producto" style="max-width: 100px;">
+                <button onClick="deleteProduct(product)">Eliminar</button><br>
             `;
             productsList.appendChild(productEl);
         });
+    }
+
+    //borrar
+    function deleteProduct(product) {
+
+        
     }
 });
