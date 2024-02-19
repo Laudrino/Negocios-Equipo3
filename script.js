@@ -1,10 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     let products = []; 
 
-    document.getElementById('addImageButton').addEventListener('click', function() {
-        document.getElementById('imagenProducto').click();
-    });
-
     document.getElementById('productForm').addEventListener('submit', function(e) {
         e.preventDefault(); 
 
@@ -17,7 +13,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const reader = new FileReader();
         reader.onload = function(event) {
             const imagenBase64 = event.target.result;
-            products.push({ nombre, descripcion, precio, imagen: imagenBase64, categoria });
+            const productId = Date.now().toString();
+            products.push({
+                id: productId,
+                nombre,
+                descripcion,
+                precio,
+                imagen: imagenBase64,
+                categoria
+            });
             displayProductsOnPage(products); 
         };
         reader.readAsDataURL(imagen);
@@ -41,15 +45,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 <strong>Precio:</strong> $${product.precio}<br>
                 <strong>Categoría:</strong> ${product.categoria}<br>
                 <img src="${product.imagen}" alt="Imagen del producto" style="max-width: 100px;">
-                <button onClick="deleteProduct(product)">Eliminar</button><br>
+                <button data-id="${product.id}">Eliminar</button><br>
             `;
             productsList.appendChild(productEl);
         });
     }
+     document.getElementById('productsList').addEventListener('click', function (e) {
+        if (e.target && e.target.nodeName === 'BUTTON' && e.target.hasAttribute('data-id')) {
+            const productId = e.target.getAttribute('data-id');
+            deleteProduct(productId);
+        }
+    });
 
     //borrar
-    function deleteProduct(product) {
-
-        
+    function deleteProduct(productId) {
+        const productIndex = products.findIndex(product => product.id === productId);
+        if (productIndex !== -1) {
+            products.splice(productIndex, 1);
+            displayProductsOnPage(products);
+        }
     }
 });
