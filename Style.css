@@ -51,3 +51,10 @@ button:hover {
     border: 40px;
     margin-left: 150px;
 }
+
+
+#productsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
