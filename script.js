@@ -56,8 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
             deleteProduct(productId);
         }
     });
-
-    //borrar
     function deleteProduct(productId) {
         const productIndex = products.findIndex(product => product.id === productId);
         if (productIndex !== -1) {
