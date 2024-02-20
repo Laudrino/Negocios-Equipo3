@@ -1,10 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     let products = []; 
 
+    document.getElementById('addImageButton').addEventListener('click', function() {
+        document.getElementById('imagenProducto').click();
+    });
+
     document.getElementById('productForm').addEventListener('submit', function(e) {
         e.preventDefault(); 
 
-        const id = Date.now().toString(); // Generar ID único
+        const id = document.getElementById('idProducto').value; // Obtener el valor del campo de ID
         const nombre = document.getElementById('nombreProducto').value;
         const descripcion = document.getElementById('descripcionProducto').value;
         const precio = document.getElementById('precioProducto').value;
@@ -26,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         reader.readAsDataURL(imagen);
 
+        document.getElementById('idProducto').value = ''; // Limpiar el campo de ID
         document.getElementById('nombreProducto').value = '';
         document.getElementById('descripcionProducto').value = '';
         document.getElementById('precioProducto').value = '';
