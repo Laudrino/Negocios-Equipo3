@@ -12,6 +12,7 @@
     <section class="form-container">
         <h2>Agregar Producto</h2>
         <form id="productForm">
+            <input type="text" id="idProducto" placeholder="ID del Producto" required>
             <input type="text" id="nombreProducto" placeholder="Nombre del Producto" required>
             <input type="text" id="descripcionProducto" placeholder="Descripción del Producto" required>
             <input type="number" id="precioProducto" placeholder="Precio" required>
@@ -20,6 +21,14 @@
             <button id="addImageButton" type="button">Agregar Imagen</button>
             <button type="submit">Agregar</button>
         </form>
+    </section>
+    
+    <section class="search-container">
+        <h2>Buscar Producto</h2>
+        <div class="search-box">
+            <input type="text" id="searchBar" placeholder="Buscar...">
+            <button id="searchButton">Aceptar</button>
+        </div>
     </section>
     
     <section class="products-container">
