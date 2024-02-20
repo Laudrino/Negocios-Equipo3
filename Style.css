@@ -2,14 +2,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #AFEEEE;
 }
 
 .form-container,
 .search-container {
-    background-color: white;
+    background-color: OldLace;
     padding: 20px;
     margin-bottom: 20px;
+    margin-right: 200px;
+    margin-left: 200px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -41,12 +43,18 @@ button:hover {
 }
 
 #productsList img {
-    max-width: 100px;
+    max-width: 200px;
+    max-height: 200px;
+    margin: 300;
+    margin-top: -70px;
+    margin-bottom: 40px;
+    border: 40px;
+    margin-left: 150px;
 }
 
-#productsList .product {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 10px;
+
+#productsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
