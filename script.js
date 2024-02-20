@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('productForm').addEventListener('submit', function(e) {
         e.preventDefault(); 
 
+        const id = Date.now().toString(); // Generar ID único
         const nombre = document.getElementById('nombreProducto').value;
         const descripcion = document.getElementById('descripcionProducto').value;
         const precio = document.getElementById('precioProducto').value;
@@ -13,9 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const reader = new FileReader();
         reader.onload = function(event) {
             const imagenBase64 = event.target.result;
-            const productId = Date.now().toString();
             products.push({
-                id: productId,
+                id,
                 nombre,
                 descripcion,
                 precio,
@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         products.forEach(product => {
             const productEl = document.createElement('div');
             productEl.innerHTML = `
+                <strong>ID:</strong> ${product.id}<br>
                 <strong>Nombre:</strong> ${product.nombre}<br>
                 <strong>Descripción:</strong> ${product.descripcion}<br>
                 <strong>Precio:</strong> $${product.precio}<br>
@@ -50,12 +51,14 @@ document.addEventListener('DOMContentLoaded', () => {
             productsList.appendChild(productEl);
         });
     }
-     document.getElementById('productsList').addEventListener('click', function (e) {
+
+    document.getElementById('productsList').addEventListener('click', function (e) {
         if (e.target && e.target.nodeName === 'BUTTON' && e.target.hasAttribute('data-id')) {
             const productId = e.target.getAttribute('data-id');
             deleteProduct(productId);
         }
     });
+
     function deleteProduct(productId) {
         const productIndex = products.findIndex(product => product.id === productId);
         if (productIndex !== -1) {
