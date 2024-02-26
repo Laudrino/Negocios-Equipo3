@@ -58,7 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <strong>Precio:</strong> $${product.precio}<br>
             <strong>Categoría:</strong> ${product.categoria}<br>
             <img src="${product.imagen}" alt="Imagen del producto" style="max-width: 100px;">
-            <button data-id="${product.id}" class="delete-button" id="borrar">Eliminar</button><br>
+            <button data-id="${product.id}" class="delete-button" id="borrar">Eliminar</button>
+            <button  id="actualizar">Actualizar</button><br>
         `;
         return productEl;
     }
