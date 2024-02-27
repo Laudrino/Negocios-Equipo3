@@ -79,3 +79,118 @@ button:hover {
     max-width: 600px;
     margin-bottom: 20px;
 }
+
+/*Erik*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #AFEEEE;
+}
+
+.form-container,
+.search-container {
+    background-color: OldLace;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-right: 200px;
+    margin-left: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#productsList img {
+    max-width: 200px;
+    max-height: 200px;
+    margin: 300;
+    margin-top: -70px;
+    margin-bottom: 40px;
+    border: 40px;
+    margin-left: 150px;
+}
+
+
+#productsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/*Editar*/
+.edit-btn {
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+  }
+
+  /*editar*/
+  .Btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100px;
+    height: 40px;
+    border: none;
+    padding: 0px 20px;
+    background-color: rgb(168, 38, 255);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px rgb(140, 32, 212);
+    transition-duration: .3s;
+  }
+  
+  .svg {
+    width: 13px;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    fill: white;
+    transition-duration: .3s;
+  }
+  
+  .Btn:hover {
+    color: transparent;
+  }
+  
+  .Btn:hover svg {
+    right: 43%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    transition-duration: .3s;
+  }
+  
+  .Btn:active {
+    transform: translate(3px , 3px);
+    transition-duration: .3s;
+    box-shadow: 2px 2px 0px rgb(140, 32, 212);
+  }
