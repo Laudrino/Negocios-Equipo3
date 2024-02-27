@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 20px;
     background-color: #AFEEEE;
-}
+} 
 
 .form-container,
 .search-container {
@@ -141,13 +141,6 @@ button:hover {
     flex-wrap: wrap;
     gap: 10px;
 }
-
-/*Editar*/
-.edit-btn {
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-  }
 
   /*editar*/
   .edit-btn {
