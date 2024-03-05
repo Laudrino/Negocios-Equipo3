@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     productForm.addEventListener('submit', function (event) {
         event.preventDefault();
-
+        
         const nombre = document.getElementById('nombreProducto').value;
         const descripcion = document.getElementById('descripcionProducto').value;
         const precio = document.getElementById('precioProducto').value;
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
             productId++;
 
             newRow.innerHTML = `
-                <td>${productId}</td>
+                <td class="productId">${productId}</td>
                 <td class="productName">${nombre}</td>
                 <td class="productDescription">${descripcion}</td>
                 <td class="productPrice">${precio}</td>
