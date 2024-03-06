@@ -81,61 +81,6 @@ button:hover {
 }
 
 /*Erik*/
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #AFEEEE;
-}
-
-.form-container,
-.search-container {
-    background-color: OldLace;
-    padding: 20px;
-    margin-bottom: 20px;
-    margin-right: 200px;
-    margin-left: 200px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    margin-top: 0;
-}
-
-input[type="text"],
-input[type="number"],
-input[type="file"] {
-    width: calc(100% - 22px);
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-#productsList img {
-    max-width: 200px;
-    max-height: 200px;
-    margin: 300;
-    margin-top: -70px;
-    margin-bottom: 40px;
-    border: 40px;
-    margin-left: 150px;
-}
-
-
 #productsList {
     display: flex;
     flex-wrap: wrap;
